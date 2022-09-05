@@ -70,3 +70,4 @@ yarn.lock should always be stored within your repository (even if you develop a 
        | -- index.js                        -> Declare view page   
 
 NOTE: Source code in master branch.
+
