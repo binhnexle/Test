@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import InfiniteScroll from 'react-infinite-scroller';
 import { Container } from '@mui/system';
-import { Grid } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import { DEFAULT_IMAGE, URL_GALLERY, URL_GALLERY_WITH_PAGE } from '../constants';
 
 import CardImage from '../components/CardImage';
@@ -27,13 +27,31 @@ function TestPage() {
       });
   };
 
+  const Loading = styled('div')(({ theme }) => ({
+    width: '50px',
+    height: '50px',
+    borderRadius: '50%',
+    border: `5px solid ${theme.palette.secondary.main}`,
+    borderTop: `5px solid ${theme.palette.primary.main}`,
+    animation: 'spin 1s linear infinite',
+
+    '@keyframes spin': {
+      '0%': {
+        transform: 'rotate(0deg)',
+      },
+      '100%': {
+        transform: 'rotate(360deg)',
+      },
+    },
+  }));
+
   return (
-    <Container align="center" ref={parentRef}>
+    <Container align="center" ref={parentRef} style={{ height: '100vh', overflow: 'auto' }}>
       <InfiniteScroll
         pageStart={0}
         loadMore={loadMore}
         hasMore={hasMore}
-        loader={<Grid container justifyContent="center" />}
+        loader={<Loading />}
         useWindow={false}
         getScrollParent={() => parentRef.current}
       >
