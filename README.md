@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 # Test
 Render a bunch of articles
 
 # Getting Started with Create React App
-=======
-# TEST
->>>>>>> 6204f21 (Render a bunch of articles with available API)
+
 
 ## 1.Installation
 
