@@ -46,7 +46,7 @@ function TestPage() {
   }));
 
   return (
-    <Container align="center" ref={parentRef} style={{ height: '100vh', overflow: 'auto' }}>
+    <Container align="center" ref={parentRef} style={{ height: '100vh', overflow: 'auto', maxWidth: '100vw' }}>
       <InfiniteScroll
         pageStart={0}
         loadMore={loadMore}

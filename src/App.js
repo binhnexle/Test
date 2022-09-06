@@ -5,9 +5,7 @@ import TestPage from './views/Testpage';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <TestPage />
-      </header>
+      <TestPage />
     </div>
   );
 }
